@@ -1,0 +1,65 @@
+import java .util.*;
+public class startwithproblemprefixusingbooleanfun {
+       static class Node{
+    Node children[]=new Node[26];
+    boolean eow=false;
+
+    Node(){
+        for(int i=0;i<26;i++){
+            children[i]=null;
+        }
+    }
+   }
+   public static Node root=new Node();
+
+   public static void insert(String word){
+    Node current =root;
+    for (int level=0 ;level<word.length();level++){
+        int idx=word.charAt(level)-'a';
+        if(current.children[idx]==null){
+            current.children[idx]=new Node();
+        }
+        current=current.children[idx];
+    }
+    current.eow=true;
+   }
+
+   public static boolean search(String key){
+    Node current =root;
+    for (int level=0 ;level<key.length();level++){
+        int idx=key.charAt(level)-'a';
+        if(current.children[idx]==null){
+            return false;
+        }
+        current=current.children[idx];
+    }
+  return  current.eow=true;
+   }
+
+    public static boolean startwith(String prefix){
+        Node curr=root;
+        for(int i=0;i<prefix.length();i++){
+            int idx =prefix.charAt(i)-'a';
+            if(curr.children[idx]==null){
+                return false;
+            }
+            curr=curr.children[idx];
+        }
+        return true;
+    }   
+
+   public static void main (String[] args){
+    String word[]={"apple","app","mango", "man","womean"};
+    String perfix1="app";
+    String prefix2="moon";
+
+
+    for(int i=0; i<word.length;i++){
+        insert(word[i]);
+    }
+System .out.println(startwith(perfix1));
+System .out.println(startwith(prefix2));
+   }
+}
+
+
