@@ -61,9 +61,11 @@ return false;
         Edge e= graph[curr].get(i);
 
         //case  3
-        if(!visit[e.dest]&&detectcycleutil(graph, visit, e.dest, curr)){
+        if(!visit[e.dest]){
+            if(detectcycleutil(graph, visit, e.dest, curr)){
             return true;
         }
+    }
         else if(visit[e.dest] && e.dest != parent){
             return true;
         }
