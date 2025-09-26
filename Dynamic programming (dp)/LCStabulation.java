@@ -17,11 +17,12 @@ public class LCStabulation {
                 if(str1.charAt(i-1)==str2.charAt(j-1)){
             dp[i][j]=dp[i-1][j-1]+1;
         }else{
-            int ans1= dp[i-1][j];
+             int ans1= dp[i-1][j];
             int ans2= dp[i][j-1];
 
             dp[i][j]= Math.max(ans1, ans2);
-            }
+        
+           }
         } 
     }
         return dp[n][m];
@@ -30,5 +31,6 @@ public class LCStabulation {
         String str1="abcdeg";
         String str2 ="abedg";
         System.out.println(LCSTabulation(str1, str2));
+            
     }   
 }    
