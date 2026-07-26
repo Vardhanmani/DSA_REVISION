@@ -13,7 +13,7 @@ public class LLsum {
         Node head = new Node(10);
         Node second = new Node(20);
         Node third = new Node(30);
-        head.next = second;
+        head.next = second;S
         second.next = third;
         Node current = head;
         int sum = 0;
