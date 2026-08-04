@@ -13,7 +13,7 @@ public class binarysearch6 {
         for(int pile : piles){
             end = Math.max(end,pile);
         }
-        int ans = end; 
+        int ans = end; //11
         while (start<=end){
             int mid = start+(end-start)/2;
             if(canfinish(piles,mid,h)){
