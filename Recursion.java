@@ -5,7 +5,6 @@ public class Recursion {
     if(n==0){
         return;
     }
-    
     printCountdown(n-1);
     System.out.print(n);
 }
