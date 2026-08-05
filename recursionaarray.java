@@ -12,7 +12,7 @@ public class recursionaarray {
         int[] arr1 = {1, 2, 3, 4, 5};
         int[] arr2 = {1, 2, 4, 3, 5};
 
-        System.out.println("Is arr1 sorted? " + isSorted(arr1, 0));
-        System.out.println("Is arr2 sorted? " + isSorted(arr2, 0));
+        System.out.print("Is arr1 sorted? " + isSorted(arr1, 0));
+        System.out.print("Is arr2 sorted? " + isSorted(arr2, 0));
     }
 }
