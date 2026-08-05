@@ -12,6 +12,6 @@ public class fibonacci {
     public static void main (String args[]){
         int n=5;
         int fin =  fibonacci(n);
-        System.out.print(fin);
+        System.out.println(fin);
     }
 }
