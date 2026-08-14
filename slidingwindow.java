@@ -7,7 +7,7 @@ public class slidingwindow {
                 slidingWindow += arr[i];
             }
             for(int i=k; i<arr.length ; i++){
-                slidingWindow = slidingWindow + arr[i]-arr[i-k];
+                slidingWindow = slidingWindow + arr[i]-arr[i-k]; 
                 if(slidingWindow > maxsum){
                     maxsum = slidingWindow;
                 }
