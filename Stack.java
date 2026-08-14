@@ -13,7 +13,7 @@ public class Stack {
         //remove element
         public static int pop(){
             if(isEmpty()){
-                System.out.print("stack is empty")
+                System.out.print("stack is empty");
                 return-1;
             }
             int top =list.get(list.size()-1);
@@ -29,7 +29,7 @@ public class Stack {
         }
     }
     public static void main (String[] args){
-        Stack s = new Stack();
+        stackUsingArraylist s = new stackUsingArraylist();
         s.push(1);
         s.push(2);
         s.push(3);
