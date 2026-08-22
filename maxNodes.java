@@ -18,7 +18,7 @@ public class maxNodes {
         int lefts = maxnodes(root.left);
         int rights = maxnodes(root.right);
         
-        return Math.max(lefts,rights)+1;
+        return lefts+rights+root.data;
     }
     public static void main(String args[]) {
         Node root = new Node(1);
