@@ -29,7 +29,7 @@ public class diamater {
         root.left.left = new Node(4);
         root.left.right = new Node(5);
         diamaters(root);
-        System.out.println(maxs);
+        
         System.out.print(maxs);
     }
 }
