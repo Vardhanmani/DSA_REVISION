@@ -1,25 +1,17 @@
- import java.util.Arrays;
 class Solution {
     public int[] twoSum(int[] nums, int target) {
-        for (int i = 0; i < nums.length; i++) {
-            for (int j = i + 1; j < nums.length; j++) {
-                int total = nums[i] + nums[j];
-                if (total == target) {
-                    return new int[]{i, j};
-                }
-            }
-        }
-        return new int[0];
-    }
-
-    public static void main(String[] args) {
-        int nums[] = {2, 7, 11, 15};
-        int target = 9;
-        Solution sol=new Solution();
-
-        int[] result =sol. twoSum(nums, target);
+        HashMap<Integer, Integer> map = new HashMap<>();
         
-
-        System.out.print(Arrays.toString(result));
+        for (int i = 0; i < nums.length; i++) {
+            int complement = target - nums[i];
+            
+            if (map.containsKey(complement)) {
+                return new int[] { map.get(complement), i };
+            }
+            
+            map.put(nums[i], i);
+        }
+        
+        return new int[] {};
     }
 }
