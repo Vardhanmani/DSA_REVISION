@@ -5,20 +5,15 @@ class Solution {
             x = 1 / x;
             N = -N;
         }
-        
-        double ans = 1.0;
+        double answer = 1.0;
         double currentProduct = x;
-        
-        while (N > 0) {
-            
+        while (N > 0) { 
             if (N % 2 == 1) {
-                ans = ans * currentProduct;
+                answer = answer * currentProduct;
             }
-           
             currentProduct = currentProduct * currentProduct;
             N = N / 2;
         }
-        
-        return ans;
+        return answer;
     }
 }
